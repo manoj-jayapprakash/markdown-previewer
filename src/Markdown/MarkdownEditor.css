@@ -1,6 +1,8 @@
 #editor {
   max-width: 100%;
   width: 100%;
+  resize: vertical;
+  min-height: 50vh;
 }
 
 @media (min-width: 600px) {
