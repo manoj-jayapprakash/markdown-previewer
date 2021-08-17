@@ -1,7 +1,7 @@
 import './MarkdownPreviewer.css';
 import marked from 'marked';
 
-export const MarkdownPreviewer = () => {
+export const MarkdownPreviewer = (props) => {
   const markdownConverter = (str) => {
     return { __html: marked(str) };
   };
@@ -14,7 +14,7 @@ export const MarkdownPreviewer = () => {
       <div className="section__body">
         <div
           id="preview"
-          dangerouslySetInnerHTML={markdownConverter('# Markdown')}
+          dangerouslySetInnerHTML={markdownConverter(props.markdownText)}
         />
       </div>
     </section>
